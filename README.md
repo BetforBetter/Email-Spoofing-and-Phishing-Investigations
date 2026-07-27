@@ -8,8 +8,6 @@ The investigation analyzes multiple `.eml` files to determine their authenticity
 
 The project follows standard **Digital Forensics and Incident Response (DFIR)** methodology for analyzing suspicious email communications.
 
----
-
 ## Scenario
 
 Below there are two different emails sent to actual email address user@cyphoreninja.com. When the recipient checks both emails he sees no difference at the first sight. The task is to analyze headers and bodies of both emails and find out which email is spoofed and what evidence was found through header analysis. 
@@ -18,8 +16,6 @@ Below there are two different emails sent to actual email address user@cyphoreni
 <img width="632" height="548" alt="image" src="https://github.com/user-attachments/assets/a86e4d48-67f4-475c-b284-8cc9841a7faf" />
 
 Additionally, “I won't be able to make it today.eml” email was also sent from user@cyphoreninja.com to mgunestas@hotmail.coman. The email's content and header needs to be analyzed the to find what is inconsistent.
-
----
 
 ## Objectives
 
@@ -31,8 +27,6 @@ Additionally, “I won't be able to make it today.eml” email was also sent fro
 - Identify phishing indicators
 - Correlate forensic evidence to determine email authenticity
 
----
-
 # Tools Used
 
 - Windows Command Prompt
@@ -40,8 +34,6 @@ Additionally, “I won't be able to make it today.eml” email was also sent fro
 - ViewDNS.info
 - SHA-256 Hash Verification (`certutil`)
 - Windows 11
-
----
 
 # Skills Demonstrated
 
@@ -59,7 +51,7 @@ Additionally, “I won't be able to make it today.eml” email was also sent fro
 - Digital Forensics
 - Technical Documentation
 
----
+
 
 # Investigation Workflow
 
@@ -100,15 +92,11 @@ Correlate Indicators
 Determine Email Authenticity
 ```
 
----
-
 # Key Investigation Steps
 
 ### 1. Evidence Verification
 
 Verified SHA-256 hashes of all `.eml` files to ensure forensic integrity before beginning the investigation.
-
----
 
 ### 2. Email Header Analysis
 
@@ -123,8 +111,6 @@ Examined:
 
 to reconstruct email transmission.
 
----
-
 ### 3. Authentication Validation
 
 Validated industry-standard authentication mechanisms:
@@ -135,19 +121,13 @@ Validated industry-standard authentication mechanisms:
 
 to determine whether each email originated from an authorized sender.
 
----
-
 ### 4. OSINT Investigation
 
 Performed WHOIS and IP reputation lookups on originating IP addresses and domains to identify suspicious infrastructure and spoofing services.
 
----
-
 ### 5. Phishing Analysis
 
 Inspected HTML content to identify mismatched hyperlinks and other phishing indicators hidden within email bodies.
-
----
 
 ### 6. Evidence Correlation
 
@@ -161,8 +141,6 @@ Correlated:
 
 to determine whether each email was legitimate or spoofed.
 
----
-
 # Key Findings
 
 - Successfully distinguished legitimate emails from spoofed emails.
@@ -171,13 +149,6 @@ to determine whether each email was legitimate or spoofed.
 - Traced suspicious sender infrastructure using WHOIS and IP reputation analysis.
 - Demonstrated how email header analysis can reveal malicious activity even when message content appears legitimate.
 
----
 
 
 
-**Siddhita Salunke**
-
-Cybersecurity | Digital Forensics | SOC | AI Security
-
-- LinkedIn: *(Add your LinkedIn profile)*
-- GitHub: *(Add your GitHub profile)*
