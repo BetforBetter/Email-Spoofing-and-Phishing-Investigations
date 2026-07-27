@@ -15,7 +15,7 @@ Below there are two different emails sent to actual email address user@cyphoreni
 <br><br>
 <img width="628" height="546" img align="center" alt="Screenshot 2026-07-27 at 1 05 17 PM" src="https://github.com/user-attachments/assets/3dd5910a-eb18-4156-a255-302ee73927d5" />
 <br><br>
-<img width="632" height="548" alt="image" src="https://github.com/user-attachments/assets/a86e4d48-67f4-475c-b284-8cc9841a7faf" />
+<img width="632" height="548" img align="center" alt="image" src="https://github.com/user-attachments/assets/a86e4d48-67f4-475c-b284-8cc9841a7faf" />
 <br><br>
 
 ## Objectives
