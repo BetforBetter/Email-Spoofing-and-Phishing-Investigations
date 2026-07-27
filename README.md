@@ -35,24 +35,6 @@ Additionally, “I won't be able to make it today.eml” email was also sent fro
 - SHA-256 Hash Verification (`certutil`)
 - Windows 11
 
-# Skills Demonstrated
-
-- Email Forensics
-- Email Header Analysis
-- Email Authentication
-- SPF Validation
-- DKIM Analysis
-- DMARC Validation
-- Email Spoofing Detection
-- Phishing Detection
-- SMTP Header Analysis
-- WHOIS / IP Reputation Analysis
-- OSINT Investigation
-- Digital Forensics
-- Technical Documentation
-
-
-
 # Investigation Workflow
 
 ```
