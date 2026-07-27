@@ -27,7 +27,7 @@ Additionally, “I won't be able to make it today.eml” email was also sent fro
 - Identify phishing indicators
 - Correlate forensic evidence to determine email authenticity
 
-# Tools Used
+## Tools Used
 
 - Windows Command Prompt
 - Notepad
@@ -35,7 +35,7 @@ Additionally, “I won't be able to make it today.eml” email was also sent fro
 - SHA-256 Hash Verification (`certutil`)
 - Windows 11
 
-# Investigation Workflow
+## Investigation Workflow
 
 ```
 Evidence Acquisition
@@ -74,7 +74,7 @@ Correlate Indicators
 Determine Email Authenticity
 ```
 
-# Key Investigation Steps
+## Key Investigation Steps
 
 ### 1. Evidence Verification
 
@@ -123,7 +123,7 @@ Correlated:
 
 to determine whether each email was legitimate or spoofed.
 
-# Key Findings
+## Key Findings
 
 - Successfully distinguished legitimate emails from spoofed emails.
 - Identified spoofing attempts through failed SPF, DKIM, and DMARC validation.
