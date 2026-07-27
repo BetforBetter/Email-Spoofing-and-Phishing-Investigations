@@ -1,0 +1,217 @@
+Return-Path: <mgunestas@newhaven.edu>
+Delivered-To: user@cyphoreninja.com
+Received: from mt-rebirth.panel-giris.com
+	by mt-rebirth.panel-giris.com with LMTP
+	id CDI5KNalDWZLfQAA3I5lKA
+	(envelope-from <mgunestas@newhaven.edu>)
+	for <user@cyphoreninja.com>; Wed, 03 Apr 2024 21:54:14 +0300
+Return-path: <mgunestas@newhaven.edu>
+Envelope-to: user@cyphoreninja.com
+Delivery-date: Wed, 03 Apr 2024 21:54:14 +0300
+Received: from outbound-ip138b.ess.barracuda.com ([209.222.82.74]:50048)
+	by mt-rebirth.panel-giris.com with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.96.2)
+	(envelope-from <mgunestas@newhaven.edu>)
+	id 1rs5kU-0008IG-14
+	for user@cyphoreninja.com;
+	Wed, 03 Apr 2024 21:54:14 +0300
+Received: from NAM10-MW2-obe.outbound.protection.outlook.com (mail-mw2nam10lp2101.outbound.protection.outlook.com [104.47.55.101]) by mx-outbound18-143.us-east-2b.ess.aws.cudaops.com (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO); Wed, 03 Apr 2024 18:53:32 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=LNdydvkhKBElRRF9apfR3Q/Gd9cFzpRVH/1u875z1Zl6lk8VWoUPVliegu/cKynwK9Bpq7GiIwts+fHJ89zMq1a/L5IzVRptCkwYl+2TMtjNGd3bMEXHbxIeY8tTszU8ULRvbHq8ucMlJcNrDL3ojSObnp/sDQw3cJ/0aL1YHEDvX+mbh1wihDHdXfCgmPmjO/y0B8KZbkgtGWAGD1hlFLAt1EBV/6d3eTO2hR5a++2SlrJeE2/QEUYKQdjBWuvHLDjIVP+4NKn2jHx9MQNZdG/ybxnWTZq3yOoNFnUGLGKR76S4rTpLc9FsP3Ncn32iZEaBX+nlhwVF/mcjyW2Nyw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=fpq2540ACPCSEsriGpEsm5vI0BuQjQfhTaXzv0/8kuI=;
+ b=c325P1g9U3Jc3iwquoD2LXgir7jtWV1awk5HxBW9s+FwwtAGSMIlhV2V6ZHKzn2eQvcHkuTRl3GdNX54VEdEdm1y3/d84EFY+QSOcL9DEAq/hTCgvn+FMl7l0H++LHAdYTO8W/hxjOLJcDQFfFa2OZr1p8TqINGvV1KQ3RcueL815mKvdIX//cE+FP3WgkdoHrnrbsoPP9G//ammleWt+t2M19Xlbke9rUtwajUs79wiQOUd/locLeurXgAnAaLmQ/HlVeQxvbbG1sdV2pwAFUYBS8ZT+xP8ba8oQqF1sLEW/ixxqpS+drZaFSFyXNHxKyhOTC+KrWYuxdeWel9R7g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=newhaven.edu; dmarc=pass action=none header.from=newhaven.edu;
+ dkim=pass header.d=newhaven.edu; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=newhaven.edu;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=fpq2540ACPCSEsriGpEsm5vI0BuQjQfhTaXzv0/8kuI=;
+ b=0mjuy7YOLV8R5ukn/LgpL5l9uGBsF2gPoqlFMnIOOBFNmqP8io8s1AzRSbEvnteQiZw8OG0PjpnZ/39npFPWI/DQHMl1iaT4HdxGKJamcJDob0SJDr6QModUSiZy99aQ0KiYpG31SKEsf74Q4ARK9EtZmKM07B7pAmCgPuXxsbz/n+4X4Su+yzhN08nUyEvI+D0Q/4oAqPYuxrWXdAi+xJqv9ymNgkax4ReSeUKCKMy4qmw9PBsaNgcEU0m0XcoOre76D2Vfc0HgehfkCrdp89bsxfz4r9SrrvwWssMsznr08HUc+7Rw6p1yMRjfiwaONjQjkMdGWEp+eFvZK/i94Q==
+Received: from IA1PR02MB9590.namprd02.prod.outlook.com (2603:10b6:208:3f6::18)
+ by PH0PR02MB8793.namprd02.prod.outlook.com (2603:10b6:510:f0::5) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7409.46; Wed, 3 Apr
+ 2024 18:53:30 +0000
+Received: from IA1PR02MB9590.namprd02.prod.outlook.com
+ ([fe80::a547:5296:4bee:b854]) by IA1PR02MB9590.namprd02.prod.outlook.com
+ ([fe80::a547:5296:4bee:b854%6]) with mapi id 15.20.7409.042; Wed, 3 Apr 2024
+ 18:53:30 +0000
+From: "Gunestas, Murat" <mgunestas@newhaven.edu>
+To: "user@cyphoreninja.com" <user@cyphoreninja.com>
+Subject: Check if this is spoofed!
+Thread-Topic: Check if this is spoofed!
+Thread-Index: AQHahfgIODTrbADeoEqZ+gV07dzcWg==
+Date: Wed, 3 Apr 2024 18:53:30 +0000
+Message-ID:
+ <IA1PR02MB95905A7C5016AD1B5679AD9DC93D2@IA1PR02MB9590.namprd02.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: IA1PR02MB9590:EE_|PH0PR02MB8793:EE_
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ 1Vw5Qs0KsNXHa21HvpfpuIc+I6ovBLd8IjzZ3+BdYvb15sbAkdHioSRWdJKlMGxpSzePZnmn2F2mxAOX8PMWOyDqcerVFzSBXe5IiG7vD+oombwRfpH9qrmVCU49W1Sk4be7Ykq9/BHWgxSQRcjgOwLziZuN5y10QVtLRHJDowvtqIMjegt3TSvkDOoOBid3XfnQLpvnfX3a2zSe6XFjHcazMWoAq90QV5pVJm+Dco9xKLvVPVV11Q2WXA9AIkuEIpdEOGAt0pO3hFbZvecgdo0TpMgSHfhIBd1EoRKpancDgCgR8oe6IvkgLssSpw8OHzA6G6oRGCY5q3+SJLfWK6pUCJWCGJXZZiMqsxEMoJmUg6Q4CmIolja/lgmmcQPVCtniBbd7dhsR6Z/puQaXjiAlS5TbGNZFsRLUKRqagJIHbgc0BFjcWDbKZCPOrnGsVpJgTuIJozbvkuLMYDtUylghP9iseAsP+qgO8lzSwF7I7NUSqtf8PWjGC7hrV2/b7soqigO1jJCSSPZ04x0brkVd9tFH//H2eFlTPrujugjWgm7Zb462olSAzMox9WxwG57f1ofXnA0PuvRHj0lDzqVZc5wuD7TkU1yFC5sIDIw=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:IA1PR02MB9590.namprd02.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230031)(366007)(1800799015)(376005);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?dMV1w5hJR/25eAu4cmO/zRy9CnYKxBxUIfPLnOcb6e97PjFxR3KIfNJ6kI?=
+ =?iso-8859-1?Q?JS/q0zkqky1Ab84DLEabVYftcliyZvOWMBlHjbrsrysAx7xGVL2FtoQeTo?=
+ =?iso-8859-1?Q?l1E4/oXLSduh4od1l8Hkt39uBbL8vyJr6Yvk//io+Sl2W6O7N62FtLOIG1?=
+ =?iso-8859-1?Q?hFVQ/XvFaAN8cCJOlI3K4SKK5EOgZFN8BfeJtxXdbHAPKdRzAgDGC0MuLs?=
+ =?iso-8859-1?Q?rndu2+OpUT6TEon3pS07faU19pPoUWUt1znUcQ0Qvc+1mqsQ+cNhnh8beQ?=
+ =?iso-8859-1?Q?cpcnckaLInYRIv88IR1VWwGL6AFAjtkrWHqJ5Gv7kGlBHMbee7wpvmiLwZ?=
+ =?iso-8859-1?Q?scRDyGGO4eVBg7s9qpHaGbAQ3qd0It6uqVBzaXPJ21osU2lzPwUuR6pwM5?=
+ =?iso-8859-1?Q?LVXujGm+RMGPE/zExqw079Kk/cZvwaBlJpUglgc/pBiOEQOVncFpuOxhYN?=
+ =?iso-8859-1?Q?J3emNstksKgziUXAk0afE4pxgRhBRU6CPIjWnVCSdqNqPKmIGoGNjOFB5/?=
+ =?iso-8859-1?Q?HrHtW/V6YdydCI403nxTcavt87nlG7ksF19gkg9+LDH9WXNQVJYJS7+DWB?=
+ =?iso-8859-1?Q?hPhLZTkEZlqnlr43/PPjzDu/iDnI9H99qwV4LSVm5YrkU5fn+dGwCYJd4e?=
+ =?iso-8859-1?Q?su27dUeZoDxwTSw+8mp41AtSHpBiowfXKDZl79OlPGRyWtraYDDmfOTgvx?=
+ =?iso-8859-1?Q?zxkQFua327hScBRUyry4q8+UgKYjbaQ+Mbm6rC0sIFtCJfz3pT+WLIZhrr?=
+ =?iso-8859-1?Q?ddTxZm2UmzFFgw2IEYUIeeohc+D2ltlpX3CBUs76807cjyykT8PXzaIkne?=
+ =?iso-8859-1?Q?uxgVbRBvmeuobvU+E10oTULXF++tY32TmPUvQdrX/rSyrh7aJsl1YED+31?=
+ =?iso-8859-1?Q?wWEyQtQe/h2puY4GXE6gseoGNXGgKsXAEhEWtAsCu7CGtu+dKwAVr3q8Ur?=
+ =?iso-8859-1?Q?nO2PktzcgiZERbf7nwNRFvXzyf2WSdOF15pYDFEfnw2Qhh4yv8zxmYM/Kw?=
+ =?iso-8859-1?Q?tYCjl+5LAWqdrVMHIoX6hmdkFGYPruCDz/Qmh7Alor0QCQRH8zTIS9GsKI?=
+ =?iso-8859-1?Q?0FITIatNoTkjvu7uCiZHShyppz4LweqK74WF72q4/bVzRbRJenja1cvPk6?=
+ =?iso-8859-1?Q?FdXkuGRQwqmG5XQOEPxu2UcLqO7DfSVt4ZzbDx0zly5czkzU7A/cNolC41?=
+ =?iso-8859-1?Q?nZTXCMHOpVtyMmFRG8tcF9ixx74xau/9pzSymyo1EXHwXbp8qmVifhZBZL?=
+ =?iso-8859-1?Q?AnGWczi98ltQlaUXoVlhKCbU/noa2MtH36p9Vi8mD15ZL6eOUM0fK0h0om?=
+ =?iso-8859-1?Q?DroTHaRUox/3FdhbFQ0xlhRrhzs71nPl3UQV69Apq0iTr7+cn5nCWw8kI7?=
+ =?iso-8859-1?Q?52m6Wz0JMJtqvjSTERYwm2QKJPwhWElo2kSwcVZmV9CxvkfiSzItFBT4ti?=
+ =?iso-8859-1?Q?nTbtMKctyEzS543N3ecstmC12uBHXWxnbfsMxovzS88FZk4IiyZ5aW/Pbo?=
+ =?iso-8859-1?Q?tg5v6QBp3nCOGnCgVNcPEh/l5Yx6IHezegEZloepl5NBL7/Qa4hIWAtIBn?=
+ =?iso-8859-1?Q?pnjTuHLaf37EYdFzRkN5DH518U6sLo+RBtfTMBXx120v2wqZs0nbcUR9Bl?=
+ =?iso-8859-1?Q?V9EIEcGZR/egVMA8qLh7p3M+3pa7I7x9Ku?=
+Content-Type: multipart/alternative;
+	boundary="_000_IA1PR02MB95905A7C5016AD1B5679AD9DC93D2IA1PR02MB9590namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: newhaven.edu
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: IA1PR02MB9590.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6282d699-ff38-4eaf-3635-08dc540f5af9
+X-MS-Exchange-CrossTenant-originalarrivaltime: 03 Apr 2024 18:53:30.7262
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 3c71cbab-b5ed-4f3b-ac0d-95509d6c0e93
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: Fgby2Qphhz+YsGpfukbu/Fks2YUWXWxGPIyVfmYbIfDI4ZEejrcctpnJn1MzYXrB4PkQvZhnMPCq5naotHCNTA==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR02MB8793
+X-BESS-ID: 1712170412-104751-19505-2306-1
+X-BESS-VER: 2019.1_20240329.1832
+X-BESS-Apparent-Source-IP: 104.47.55.101
+X-BESS-Parts: H4sIAAAAAAACAzXLMQ6EMAxE0bu4pkkyNg5XWVEkjhENotgUK624OymgGX2N9D
+	5/8l+nhfrYic4vLSwyYh9fDSW0DfDcuIpzs4oQhMUVxjC6ppfv/Xh4ZM2PT+xmJUEVIg
+	rM2aOlzeMIK9LoWm/eo/W3gAAAAA==
+X-BESS-Outbound-Spam-Score: 0.00
+X-BESS-Outbound-Spam-Report: Code version 3.2, rules version 3.2.2.255313 [from 
+	cloudscan18-250.us-east-2b.ess.aws.cudaops.com]
+	Rule breakdown below
+	 pts rule name              description
+	---- ---------------------- --------------------------------
+	0.00 HTML_MESSAGE           BODY: HTML included in message 
+	0.00 BSF_BESS_OUTBOUND      META: BESS Outbound 
+X-BESS-Outbound-Spam-Status: SCORE=0.00 using account:ESS82599 scores of KILL_LEVEL=7.0 tests=HTML_MESSAGE, BSF_BESS_OUTBOUND
+X-BESS-BRTS-Status:1
+
+--_000_IA1PR02MB95905A7C5016AD1B5679AD9DC93D2IA1PR02MB9590namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+We would like to invite you to the campus. Please register through the link=
+ below.
+
+https://www.newhaven.edu/participants
+
+Best,
+Murat.
+
+
+
+CONFIDENTIALITY NOTICE :: This email message and any documents, files, or p=
+revious e-mail messages attached to it is for the sole use of the intended =
+recipient(s) and may contain confidential and privileged information. Any u=
+nauthorized review, use, disclosure or distribution is prohibited. If you a=
+re not the intended recipient, please contact the sender by reply email and=
+ destroy all copies of the original message.
+
+
+
+--_000_IA1PR02MB95905A7C5016AD1B5679AD9DC93D2IA1PR02MB9590namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div class=3D"elementToProof" style=3D"text-align: left; text-indent: 0px; =
+margin: 0px; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, C=
+alibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Hi,</div>
+<div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);">
+We would like to invite you to the campus. Please register through the link=
+&nbsp;below.</div>
+<div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"text-align: left; margin: 0px; font-=
+family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica,=
+ sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<a href=3D"https://www.newhaven.edu/participants" id=3D"LPlnk" title=3D"htt=
+ps://www.newhaven.edu/participants">https://www.newhaven.edu/participants</=
+a></div>
+<div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);">
+Best,</div>
+<div class=3D"elementToProof" style=3D"text-align: left; text-indent: 0px; =
+margin: 0px; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, C=
+alibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Murat.</div>
+<br>
+<br>
+<br>
+CONFIDENTIALITY NOTICE :: This email message and any documents, files, or p=
+revious e-mail messages attached to it is for the sole use of the intended =
+recipient(s) and may contain confidential and privileged information. Any u=
+nauthorized review, use, disclosure
+ or distribution is prohibited. If you are not the intended recipient, plea=
+se contact the sender by reply email and destroy all copies of the original=
+ message.
+<br>
+<br>
+<br>
+</body>
+</html>
+
+--_000_IA1PR02MB95905A7C5016AD1B5679AD9DC93D2IA1PR02MB9590namp_--

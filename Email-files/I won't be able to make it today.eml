@@ -1,0 +1,138 @@
+Received: from GV2P251MB1043.EURP251.PROD.OUTLOOK.COM (2603:10a6:150:7d::12)
+ by AS1P251MB0480.EURP251.PROD.OUTLOOK.COM with HTTPS; Thu, 4 Apr 2024
+ 13:56:23 +0000
+Received: from PU1PR01CA0039.apcprd01.prod.exchangelabs.com
+ (2603:1096:803:16::27) by GV2P251MB1043.EURP251.PROD.OUTLOOK.COM
+ (2603:10a6:150:7d::12) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7409.46; Thu, 4 Apr
+ 2024 13:56:21 +0000
+Received: from HK2PEPF00006FAE.apcprd02.prod.outlook.com
+ (2603:1096:803:16:cafe::a5) by PU1PR01CA0039.outlook.office365.com
+ (2603:1096:803:16::27) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7452.27 via Frontend
+ Transport; Thu, 4 Apr 2024 13:56:19 +0000
+Authentication-Results: spf=softfail (sender IP is 89.252.187.9)
+ smtp.mailfrom=cyphoreninja.com; dkim=none (message not signed)
+ header.d=none;dmarc=temperror action=none header.from=cyphoreninja.com;
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ cyphoreninja.com discourages use of 89.252.187.9 as permitted sender)
+Received: from mt-rebirth.panel-giris.com (89.252.187.9) by
+ HK2PEPF00006FAE.mail.protection.outlook.com (10.167.8.4) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7452.22 via Frontend Transport; Thu, 4 Apr 2024 13:56:17 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:7C3726B05D5A730EFC202E6093547C06CD804587D21BC7C7976F445B7D2FD9AA;UpperCasedChecksum:1073A04BBD7B9DDF9580179E299857D69E63721A43C3E75970BED642D7E09337;SizeAsReceived:1238;Count:20
+Received: from [192.132.64.3] (port=60365 helo=smtpclient.apple)
+	by mt-rebirth.panel-giris.com with esmtpsa  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.96.2)
+	(envelope-from <user@cyphoreninja.com>)
+	id 1rsNZe-0007th-2s
+	for mgunestas@hotmail.com;
+	Thu, 04 Apr 2024 16:56:15 +0300
+From: Cyphore <user@cyphoreninja.com>
+Content-Type: text/plain;
+	charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Subject: I won't be able to make it today
+Message-Id: <81FC482D-EA28-4F63-83AE-7B173F2ED627@cyphoreninja.com>
+Date: Thu, 4 Apr 2024 09:56:03 -0400
+To: Murat Gunestas <mgunestas@hotmail.com>
+X-Mailer: Apple Mail (2.3731.700.6)
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - mt-rebirth.panel-giris.com
+X-AntiAbuse: Original Domain - hotmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - cyphoreninja.com
+X-Get-Message-Sender-Via: mt-rebirth.panel-giris.com: authenticated_id: user@cyphoreninja.com
+X-Authenticated-Sender: mt-rebirth.panel-giris.com: user@cyphoreninja.com
+X-Source:
+X-Source-Args:
+X-Source-Dir:
+X-IncomingHeaderCount: 20
+Return-Path: user@cyphoreninja.com
+X-MS-Exchange-Organization-ExpirationStartTime: 04 Apr 2024 13:56:18.3014
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4a9ed225-143a-4877-6aaf-08dc54af006e
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ HK2PEPF00006FAE:EE_|GV2P251MB1043:EE_|AS1P251MB0480:EE_
+X-MS-Exchange-Organization-AuthSource:
+ HK2PEPF00006FAE.apcprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 4/4/2024 12:35:30 PM
+X-MS-Office365-Filtering-Correlation-Id: 4a9ed225-143a-4877-6aaf-08dc54af006e
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 89.252.187.9
+X-SID-PRA: USER@CYPHORENINJA.COM
+X-SID-Result: FAIL
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 04 Apr 2024 13:56:17.6607
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4a9ed225-143a-4877-6aaf-08dc54af006e
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ HK2PEPF00006FAE.apcprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: GV2P251MB1043
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.6170286
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7409.037
+X-Microsoft-Antispam-Mailbox-Delivery:
+	wl:1;pcwl:1;ucf:0;jmr:0;ex:0;psp:0;auth:0;dest:I;OFR:TrustedSenderList;ENG:(5062000305)(920221119095)(90000117)(920221120095)(91040095)(9050020)(9075021)(9100341)(944500132)(2008001134)(4810010)(4910033)(10005027)(9610028)(9540006)(10160021)(9439006)(9310011)(9220031)(120001);
+X-Message-Info:
+	qZelhIiYnPmnl/sMjOyyCU2z/op3t9l6sJ1u+/gJ2YmsfmMe2LLnsdp5VKzSHxP0C1AOMBwbySBc/32f8mP26j2CqCp058jO35oyHZvirHcz6CDigCYSGWfW6PxRidNsEzqyNrQlB/UzFv1tt6d/2JaYIVsSyo2uOJsRlNgbXv/Lvvrx7GWGvsw2GmagdY7Z7z4KTWFHTH/Ql9lyLhqO/A==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?A42LaoFATAvyRT+k/+e2LT4yO4G/3D/tpcJM7ENoSbJdfuC3fHmmHVCeq6j8?=
+ =?us-ascii?Q?gXLBT38dabdhgGemEe9VKLi4SwEmYJMYs5isE+f0Z4ck93XsysZ6eS4Qcwh7?=
+ =?us-ascii?Q?lyA7xYfxCsJ4oxRKUD5rOO0eegP5cIoI9qpwDjay+otLs90i8JCIACQt6n/j?=
+ =?us-ascii?Q?J/q/FzCBoqY+xnv+bqlTLAOHf4Tsh5c90U/jpWAn03qjAwOvpf7D7OQ+fgY7?=
+ =?us-ascii?Q?KJ+1t7WxewWWDpQfnOOzblSA7AENOeT6WpBVk07JTus1jonSqMXfT0+3N/+z?=
+ =?us-ascii?Q?Sbk4ALphRX/z0cZMlCH749nIuXaFRgBRLt7wgmL55ntj36AnPIAXkDOTN5Iv?=
+ =?us-ascii?Q?kcRdtGFHVIkb0av6YMvVhU6f/x9r+Kv0wKG+KTCmtCEtmodWQquYjjwUKy7n?=
+ =?us-ascii?Q?erfRVSYjtE9IGy0Z8EU3jPuIKFEFabWT7UoFIW3/PoThdgrH+bcu3eyBysz1?=
+ =?us-ascii?Q?0vMEKdAdpb9q79ZZ6Cn42xl+PoGjRTluAhtEsKhXFVJcv3GW/mhF3ttua4Z6?=
+ =?us-ascii?Q?w4iMMwy6yCpxx2yejGdogZyo08PXj2QxiWNMcJNXPxuqSFWT4RPnEK880SWg?=
+ =?us-ascii?Q?7K7yh+/IivnAySKcP+cxELQLl8RhtWH6l1bOnDXdYwf2KqzN9qwotxS6Q5xu?=
+ =?us-ascii?Q?ooWQ364KFGGazg9/ixX8y2rTn7lXJaQ+BYoR2qqiznIb/E/kkP7RokyMAgBt?=
+ =?us-ascii?Q?o1FHFgkL+b52NSwIVai4p20Zc7P2IBEm50wu2+pbZjh6kHqjzx3oTB8XcEgx?=
+ =?us-ascii?Q?LSfnnahvWyKxKfP6Lj3lH0HpX3ZopSywsfxZu6q0mLc87axg1/QsLmkNj0Tr?=
+ =?us-ascii?Q?iEyW6kkT9hCnggeEg7ZRxzU/BORz2NPAHYVnIojA/awD+u1HtTC//1a5uWOB?=
+ =?us-ascii?Q?mkv3Td1g51ZRK7Gnu2iLOl1G2Z21DL4zwexdpUCFTWMlSeekcHPc14jc5gV+?=
+ =?us-ascii?Q?ZHLvBfpkm940Ox3W1IIEZXDmjZ8Rr9TF5wFnqTQzBwFCViBk1VdihS/ekxNU?=
+ =?us-ascii?Q?hNfeOVGULKsEry/MseHZefhSHo7+7Hz5TNaB9t7rt1xKzANgbO1upSMVoojh?=
+ =?us-ascii?Q?ZXBYgP9fUkDcNssyyTz6konJlySEd0E44zDZ1ZpMtJ7TvQSkI9oNMPPPtxhl?=
+ =?us-ascii?Q?NnuHrRHRnK6tK9ow/zinBLWPPNj7LqGMP+1M8Nl58KVCKll+TqjXFp4bLRCl?=
+ =?us-ascii?Q?/nIsfIbOE1ew0DqJ5At/BQo6di7yQ0J77QDO2v1poSUOzqH5fE8Q0ZqcN/f/?=
+ =?us-ascii?Q?bU62lhFCBZkFWwo9xOT7dC+2/68aYhjxQHlwHyRBaAEY9UEs+c1uFfEKknIK?=
+ =?us-ascii?Q?H88pgLunZXRegc3nUZxLjRxQYwU0qY3zKQduIckyf8lpsId1fGGIz33yPb/Z?=
+ =?us-ascii?Q?dfZCbpInuBeIA/0uo2fC+7ikydoBeUx2JrRcCPzOfNZqZ3fhmlharncHHYk4?=
+ =?us-ascii?Q?ZDu5dxrX6e6JWWYwJri4sN3uei6SI5UsNsctdNm7V6YaIYmTq8ZdKc3uiEOp?=
+ =?us-ascii?Q?mrTZbyvK/Szb4tB6iWTY4vOAEQM1a6rqhCDTNqEb0tqqme7392tyvpN9BZNN?=
+ =?us-ascii?Q?eQS2Gqv8jrFw/lz4PkoQoVHzGAlLqw4qo1uirPTYOkcRlQiiQ55GWNGHe07w?=
+ =?us-ascii?Q?pWmnVHQs9khs9ZTUOLGWALXx0jYAazfyvTN8Ka9DIfynoAy0TtoFQmf8jIDG?=
+ =?us-ascii?Q?t3LmtQFR0+Icu2QoQ2e28wr7Xqla4In/pVN9VRXfwkZ5A0eQ4JwDJLeIAXSm?=
+ =?us-ascii?Q?IHEPjaN4h0NKg5hFkWmG6W2uqITj7n8Qlldw0S8BpSQOJiwu7vFBNmZSudlF?=
+ =?us-ascii?Q?qxJKDMaFpGiGg1saeKdfnEhJegswL+sQpdlK3qSOjbzQ+cM40Vw9S7u8ApLu?=
+ =?us-ascii?Q?5gAARQBj1ZMX8SrmCDej1pk2eymEwJVjkvROi/DjOO8fbnm8YK3MxN1gCVwG?=
+MIME-Version: 1.0
+
+Hi Murat,
+
+Thank you for the invite. However, I am badly sick and at my home in Milford.
+
+Sorry for the inconvenience.
+
+Cheers,
+Cyphore.
